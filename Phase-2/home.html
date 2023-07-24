@@ -15,7 +15,7 @@
 
         /* Basic CSS for the navbar */
         body {
-            background-color: #f5f5f5;
+            background-color:black;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -24,7 +24,7 @@
         .header {
             display: flex;
             align-items: center;
-            background-color: white;
+            background-color: black;
             padding: 10px;
             box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
         }
@@ -44,28 +44,32 @@
 
         .navbar a {
             display: block;
-            color: #333;
+            color: white;
             font-size: 20px;
             text-align: center;
             padding: 10px 20px;
             text-decoration: none;
-            transition: background-color 0.2s;
         }
 
         .navbar a:hover {
-            background-color: #a3a3a3;
+            background-color: rgb(255, 255, 255);
             color: #222;
+            border-radius: 25px;
         }
 
         .slider {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
-            background-color: #ddd;
             align-items: center;
             height: 50vh;
+            background-color: #30cd8f;
+            width: 75%;
+            border-radius: 25px;
+            margin: 40px;
         }
 
         .quote {
+            color:white ;
             font-weight: bold;
             font-size: 4rem;
             text-align: left;
@@ -89,18 +93,17 @@
       
         }
         .sellers{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr); /* Creates a 2-column grid */
+            margin-left: 25%;
+            box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.35);
+            background-color: #0096fe;
+            width: 73%;
+            height: 500px;
+            display: flex;
+            justify-content: space-around;
             align-items: center;
-            justify-content: space-evenly;
             padding: 10px;
-        }
-        .author {
-            display: grid;
-            grid-template-columns:repeat(2,1fr);
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 10px;
+            padding-left: 40px;
+            border-radius: 25px;
         }
         footer {
     background-color: #333;
@@ -142,10 +145,33 @@
     padding: 25px;
     padding-left: 0px;
     box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.35);
-    background-color: white;
-    width: 75%;
+    background-color: black;
+    width: 100%;
     margin: 25px;
+    border-radius: 25px;
+    color: white;
+   
+
 }
+
+.author{
+    padding-top: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.author_text{
+    width: 50%;
+    padding-left: 25px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
     </style>
 </head>
 
@@ -169,27 +195,24 @@
             <div class="book-cover" style="background-image: url(cover2.png);background-position: center;"></div>
         </div>
     </div>
-    <div class="title1">
-        <h1 class="seller" style="text-align: center;padding: 20px;text-decoration: underline;">Best Sellers</h1>
-</div>
+
 <div class="sellers">
+    <h1 class="seller" style="text-align: center; font-size: 50px; font-weight: 900;">Best Sellers</h1>
     <div class="book-cover" style="background-image: url(cover7.png);background-position: center;"></div>
             <div class="book-cover" style="background-image: url(cover3.png);background-position: center;"></div>
             <div class="book-cover" style="background-image: url(cover4.png);background-position: center;"></div>
-            <div class="book-cover" style="background-image: url(cover5.png);background-position: center;"></div>
-            <div class="book-cover" style="background-image: url(cover6.jpg);background-position: center;"></div>
 </div>
 
 
 <div class="author_of_the_week">
     <div class="author_title">
-        <h1 style="text-align: center;">Author of the week</h1>
+        <h1 style=" font-size: 80px; text-align: center;">Author of the week</h1>
     </div>
     <div class="author">
         <div>
-        <img src="author.png" style="padding: 20px;margin-left:120px;"></div>
-        <div>
-            <p style="font-size: 20px;text-align: justify;padding: 20px;margin:auto;">Welcome to our "Author of the Week"series, where we celebrate the life and works of exceptional literary figures. This week, we pay homage to the renowned American poet, Robert Frost. With his insightful reflections on nature, life, and human experiences, Frost's poetry continues to captivate readers worldwide. Join us as we explore the life, key works, and enduring legacy of this remarkable poet.<br><b>"The Road Not Taken"</b> - A contemplative piece exploring the choices we make in life and the paths we take, leaving readers with enduring questions about destiny and individuality.
+        <img src="author.png"></div>
+        <div class="author_text">
+            <p style="font-size: 20px;text-align: justify;">Welcome to our "Author of the Week"series, where we celebrate the life and works of exceptional literary figures. This week, we pay homage to the renowned American poet, Robert Frost. With his insightful reflections on nature, life, and human experiences, Frost's poetry continues to captivate readers worldwide. Join us as we explore the life, key works, and enduring legacy of this remarkable poet.<br><b>"The Road Not Taken"</b> - A contemplative piece exploring the choices we make in life and the paths we take, leaving readers with enduring questions about destiny and individuality.
                 <b>"Stopping by Woods on a Snowy Evening"</b> - A beautiful reflection on the allure of nature and the responsibility of life's commitments, featuring some of Frost's most memorable lines.
         </div>
     </div>
