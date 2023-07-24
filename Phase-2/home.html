@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic CSS for the navbar */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar a {
+            display: block;
+            color: #333;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .navbar a:hover {
+            background-color: #a3a3a3;
+            color: #222;
+        }
+
+        .slider {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+            background-color: #ddd;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .quote {
+            font-weight: bold;
+            font-size: 4rem;
+            text-align: left;
+            padding: 50px;
+        }
+
+        .book-covers {
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            width: 100%;
+            height: 100%;
+        }
+
+        .book-cover {
+            width: 250px;
+            height: 285px;
+            border-radius: 25px;
+            background-color: #ddd;
+            margin:auto;
+      
+        }
+        .sellers{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Creates a 2-column grid */
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+        .author {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+    color: #ddd;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logodark.png" alt="Logo">
+        </div>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Collections</a>
+            <a href="#contact">Events</a>
+            <a href="#login">Login</a>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="quote">FIND<br>YOUR NEXT <br>BOOK.</div>
+        <div class="book-covers">
+            <div class="book-cover" style="background-image: url(cover1.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(cover2.png);background-position: center;"></div>
+        </div>
+    </div>
+    <div class="title1">
+        <h1 class="seller" style="text-align: center;padding: 20px;text-decoration: underline;">Best Sellers</h1>
+</div>
+<div class="sellers">
+    <div class="book-cover" style="background-image: url(cover7.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(cover3.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(cover4.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(cover5.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(cover6.jpg);background-position: center;"></div>
+            
+</div>
+    <div class="author_title">
+        <h1 style="text-align: center;text-decoration: underline;padding: 20px;">Author of the week</h1>
+    </div>
+    <div class="author">
+        <div>
+        <img src="author.png" style="padding: 20px;margin-left:120px;"></div>
+        <div>
+            <p style="font-size: 20px;text-align: center;padding: 20px;margin:auto;">Welcome to our "Author of the Week"series, where we celebrate the life and works of exceptional literary figures. This week, we pay homage to the renowned American poet, Robert Frost. With his insightful reflections on nature, life, and human experiences, Frost's poetry continues to captivate readers worldwide. Join us as we explore the life, key works, and enduring legacy of this remarkable poet.<br><b>"The Road Not Taken"</b> - A contemplative piece exploring the choices we make in life and the paths we take, leaving readers with enduring questions about destiny and individuality.
+                <b>"Stopping by Woods on a Snowy Evening"</b> - A beautiful reflection on the allure of nature and the responsibility of life's commitments, featuring some of Frost's most memorable lines.
+                <br><b>"Fire and Ice"</b> - A concise and powerful poem on human nature, desire, and the destructive forces that may shape the fate of the world.</p>
+        </div>
+    </div>
+    <div class="about us">
+        <div class="about">
+            <h1 style="text-align: center;text-decoration: underline;padding: 20px;">About Us</h1>
+            <h1 style="text-align: center;">Eminent Library Society - Empowering Knowledge, Inspiring Minds</h1>
+        </div>
+        <div>
+            <p style="font-size: 20px;text-align: center;padding: 20px;">Welcome to the Eminent Library Society, a dynamic and forward-thinking library management system dedicated to enriching lives through the power of knowledge and literature. As a progressive hub of learning and exploration, our society is committed to fostering a culture of reading, research, and intellectual growth among our members and the community at large.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 <em>Eminent Library Society</em> . All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
