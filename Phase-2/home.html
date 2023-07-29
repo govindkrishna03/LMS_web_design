@@ -7,19 +7,20 @@
     <title>My Website</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* Reset some default styles */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        /* Basic CSS for the navbar */
+       
         body {
             background-color:black;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
+            overflow-x: hidden;
         }
 
         .header {
@@ -27,6 +28,8 @@
             justify-content: space-between;
             align-items: center;
             background-color: black;
+            
+            
 
         }
 
@@ -84,17 +87,19 @@
             display: flex;
             align-items: center;
             justify-content:space-around;
-            margin: 40px;
+            margin: 20px;
             
         }
 
         .book-cover {
-            height: 300px;
+            height: 400px;
             width: 300px;
             border-radius: 25px;
             background-color: #ddd;
-            margin:10px;
-      
+            margin: 10px;
+            background-size: cover; /* Add this to make the covers fit */
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .sellers{
             margin-left: 20%;
@@ -209,9 +214,73 @@ footer{
     display: flex;
     align-items: center;
 }
+@media screen and (max-width: 1200px) {
+        .header {
+            flex-direction: column;
+        }
 
+        .logo {
+            justify-content: center;
+        }
 
+        .slider {
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+        }
 
+        .quote {
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slider .book-covers {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .book-cover {
+            width: 30vh;
+        }
+
+        .sellers {
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+        }
+
+        .seller {
+            font-size: 3rem;
+        }
+
+        .author_text {
+            width: 80%;
+        }
+
+        .author_title h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .navbar {
+            flex-direction: column;
+        }
+
+        .navbar a {
+            font-size: 16px;
+        }
+
+        .quote {
+            font-size: 2rem;
+        }
+
+        .book-cover {
+            height: 200px;
+            width: 100%;
+        }
+    }
 
     </style>
 </head>
@@ -234,16 +303,16 @@ footer{
     <div class="slider">
         <div class="quote">FIND<br>YOUR NEXT <br>BOOK.</div>
         <div class="book-covers">
-            <div class="book-cover" style="background-image: url(cover1.png);background-position: center;"></div>
-            <div class="book-cover" style="background-image: url(cover2.png);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(images/cover4.jpg);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(images/cover5.jpg);background-position: center;"></div>
         </div>
     </div>
 
 <div class="sellers">
     <h1 class="seller" style="text-align: center; font-size: 4rem; font-weight: 900;">BEST SELLERS.</h1>
-    <div class="book-cover" style="background-image: url(cover7.png);background-position: center;"></div>
-            <div class="book-cover" style="background-image: url(cover3.png);background-position: center;"></div>
-            <div class="book-cover" style="background-image: url(cover4.png);background-position: center;"></div>
+    <div class="book-cover" style="background-image: url(images/cover6.jpeg);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(images/cover1.jpeg);background-position: center;"></div>
+            <div class="book-cover" style="background-image: url(images/cover2.jpeg);background-position: center;"></div>
 </div>
 
 
@@ -253,7 +322,7 @@ footer{
     </div>
     <div class="author">
         <div>
-        <img src="author.png"></div>
+        <img src="images/author.png"></div>
         <div class="author_text">
             <p style="font-size: 20px;text-align: justify;">Welcome to our "Author of the Week"series, where we celebrate the life and works of exceptional literary figures. This week, we pay homage to the renowned American poet, Robert Frost. With his insightful reflections on nature, life, and human experiences, Frost's poetry continues to captivate readers worldwide. Join us as we explore the life, key works, and enduring legacy of this remarkable poet.<br><b>"The Road Not Taken"</b> - A contemplative piece exploring the choices we make in life and the paths we take, leaving readers with enduring questions about destiny and individuality.
                 <b>"Stopping by Woods on a Snowy Evening"</b> - A beautiful reflection on the allure of nature and the responsibility of life's commitments, featuring some of Frost's most memorable lines.
