@@ -107,6 +107,7 @@
         background-size: cover; /* Add this to make the covers fit */
         background-repeat: no-repeat;
         background-position: center;
+        transition: transform 0.2s ease;
       }
 
       .seller {
@@ -181,61 +182,64 @@
         font-weight: 200;
       }
       .author_of_the_week {
-    padding: 25px;
-    background-color: black;
-    width: 100%;
-    color: white;
-    margin: auto;
-    margin-top: 100px;
-  }
+        padding: 25px;
+        background-color: black;
+        width: 100%;
+        color: white;
+        margin: auto;
+        margin-top: 100px;
+      }
 
-  .author {
-    padding-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+      .author {
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-  .author img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
+      .author img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
 
-  .author_text {
-    width: 50%;
-    padding-left: 25px;
-    text-align: justify;
-    display: flex;
-    align-items: center;
-  }
+      .author_text {
+        width: 50%;
+        padding-left: 25px;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+      }
 
-  @media screen and (max-width: 1200px) {
-    .author_text {
-      width: 80%;
-    }
+      .book-cover1:hover {
+        transform: scale(1.1);
+      }
+      @media screen and (max-width: 1200px) {
+        .author_text {
+          width: 80%;
+        }
 
-    .author_title h1 {
-      font-size: 3rem;
-    }
-  }
+        .author_title h1 {
+          font-size: 3rem;
+        }
+      }
 
-  @media screen and (max-width: 768px) {
-    .author_text {
-      width: 100%;
-    }
+      @media screen and (max-width: 768px) {
+        .author_text {
+          width: 100%;
+        }
 
-    .author_title h1 {
-      font-size: 2.5rem;
-    }
-  }
+        .author_title h1 {
+          font-size: 2.5rem;
+        }
+      }
 
-  @media screen and (max-width: 576px) {
-    .author_title h1 {
-      font-size: 2rem;
-    }
-  }
+      @media screen and (max-width: 576px) {
+        .author_title h1 {
+          font-size: 2rem;
+        }
+      }
 
       @media screen and (max-width: 1200px) {
         .header {
@@ -267,14 +271,11 @@
           width: 30vh;
         }
 
-
-        .book-cover1{
-            height: 170px;
-            border-radius: 0px;
-
+        .book-cover1 {
+          height: 170px;
+          border-radius: 0px;
+          transition: transform 0.2s ease;
         }
-
-
 
         .seller {
           font-size: 3rem;
@@ -286,6 +287,9 @@
 
         .author_title h1 {
           font-size: 3rem;
+        }
+        .book-cover1:hover {
+          transform: scale(1.1);
         }
       }
 
@@ -303,10 +307,13 @@
         }
 
         .book-cover1 {
+          transition: transform 0.2s ease;
           height: 400px;
         }
+        .book-cover1:hover {
+          transform: scale(1.1);
+        }
       }
-      
     </style>
   </head>
 
@@ -342,21 +349,90 @@
             background-position: center;
           "
         ></div>
+        <div
+        class="book-cover"
+        style="
+          background-image: url(images/first.jpg);
+          background-position: center;
+        "
+      ></div>
       </div>
     </div>
 
     <div class="sellers">
-        <h1 class="seller" style="font-size: 4rem; font-weight: 900; text-align: center;">
-          BEST SELLERS
-        </h1>
-        <div style="display: flex; justify-content: space-evenly; align-items: center;">
-          <div class="book-cover1" style="background-image: url(images/cover3.jpeg);background-position: center;background-size: contain;"></div>
-          <div class="book-cover1" style="background-image: url(images/cover1.jpeg); background-position: center;background-size: contain;"></div>
-          <div class="book-cover1" style="background-image: url(images/cover2.jpeg); background-position: center;background-size: contain;"></div>
-          <div class="book-cover1" style="background-image: url(images/cover6.jpeg); background-position: center;background-size: contain;"></div>
-          <div class="book-cover1" style="background-image: url(images/cover8.jpeg); background-position: center;background-size: contain;"></div>
-        </div>
+      <h1
+        class="seller"
+        style="font-size: 4rem; font-weight: 900; text-align: center"
+      >
+        BEST SELLERS
+      </h1>
+      <div
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+        <a href="https://www.chetanbhagat.com/books/2-states/" target="_blank"
+          ><div
+            class="book-cover1"
+            style="
+              background-image: url(images/cover3.jpeg);
+              background-position: center;
+              background-size: contain;
+            "
+          ></div
+        ></a>
+        <a
+          href="https://www.wsfcs.k12.nc.us/cms/lib/NC01001395/Centricity/Domain/7935/Gatsby_PDF_FullText.pdf"
+          target="_blank"
+          ><div
+            class="book-cover1"
+            style="
+              background-image: url(images/cover1.jpeg);
+              background-position: center;
+              background-size: contain;
+            "
+          ></div
+        ></a>
+        <a
+          href="https://www.amazon.com/Harry-Potter-Philosophers-Stone-Rowling/dp/1408855658"
+          target="_blank"
+          ><div
+            class="book-cover1"
+            style="
+              background-image: url(images/cover2.jpeg);
+              background-position: center;
+              background-size: contain;
+            "
+          ></div
+        ></a>
+        <a
+          href="https://awoiaf.westeros.org/index.php/A_Song_of_Ice_and_Fire"
+          target="_blank"
+          ><div
+            class="book-cover1"
+            style="
+              background-image: url(images/cover6.jpeg);
+              background-position: center;
+              background-size: contain;
+            "
+          ></div
+        ></a>
+        <a
+          href="https://www.amazon.com/3-Mistakes-My-Life/dp/8129135515"
+          target="_blank"
+          ><div
+            class="book-cover1"
+            style="
+              background-image: url(images/cover8.jpeg);
+              background-position: center;
+              background-size: contain;
+            "
+          ></div
+        ></a>
       </div>
+    </div>
 
     <div class="author_of_the_week">
       <div class="author_title">
