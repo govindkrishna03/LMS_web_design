@@ -8,6 +8,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <style>
       * {
         box-sizing: border-box;
@@ -17,7 +20,7 @@
 
       body {
         background-color: white;
-        font-family: Arial, sans-serif;
+        font-family: 'Karla', sans-serif;
         line-height: 1.6;
         margin: 0;
         overflow-x: hidden;
@@ -37,7 +40,8 @@
       }
 
       .logo img {
-        height: 125px;
+        height: 50px;
+        margin: 20px;
       }
 
       .navbar {
@@ -72,6 +76,7 @@
       }
 
       .quote {
+        font-family: 'Playfair Display', serif;
         flex: 1;
         color: black;
         font-weight: bold;
@@ -111,6 +116,7 @@
       }
 
       .seller {
+        font-family: 'Playfair Display', serif;
         color: black;
         padding: 25px;
         flex: 1.5;
@@ -320,7 +326,7 @@
   <body>
     <div class="header">
       <div class="logo">
-        <img src="/images/darklogo.png" alt="Logo" />
+        <img src="images/logoin.png" alt="Logo" />
         <div style="color: black">Eminent Library Society</div>
       </div>
 
@@ -340,7 +346,37 @@
           style="
             background-image: url(images/cover4.jpg);
             background-position: center;
-          "
+          " </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Eminent Library Society</h3>
+        <p>Where dreams come true</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2023 Eminent Library Society. designed by
+          <span>us.</span>
+        </p>
+      </div>
+    </footer>
         ></div>
         <div
           class="book-cover"
