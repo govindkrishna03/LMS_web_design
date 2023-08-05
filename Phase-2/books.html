@@ -163,36 +163,38 @@
       .container{
         display: grid;
         grid-template-columns: 0.5fr repeat(15,1fr) 0.5fr;
-        grid-template-rows: repeat(24,100px);
+        grid-template-rows: repeat(28,100px);
       }
 
-      .sidebar{
-        grid-column: 2/6;
-        grid-row: 2/8;
-        background-color: bisque;
-        border-radius: 15px;
-
-      }
+      
 
       .books{
         grid-column: 7/17;
-        grid-row: 2/24;
+        grid-row: 2/28;
         display: grid;
         grid-template-columns: 0.5fr repeat(6,1fr) 0.5fr;
-        grid-template-rows: 0.5fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr 0.5fr ;
-        gap: 15px;
+        grid-template-rows: 0.5fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr;
+        gap: 25px;
         border-radius: 25px;
-        box-shadow: 9px 10px 17px 3px rgba(0,0,0,0.75);
+        box-shadow: -2px 3px 22px 0px rgba(0,0,0,0.75);
+        
       }
 
       /* Book 1 */
-/* Book 1 */
+
+.book1:hover,.book2:hover,.book3:hover,.book4:hover,.book5:hover,
+.book6:hover,.book7:hover,.book8:hover,.book9:hover{
+  transform: scale(1.05);
+}
+
+
 .book1 {
   grid-column: 2/4;
   grid-row: 2/4;
   background-image: url("images/book1.jpg");
   background-position: center;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 
 .book1 a {
@@ -217,6 +219,7 @@
   background-image: url("images/book2.jpg");
   background-position: center;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 
 .book2 a {
@@ -241,6 +244,7 @@ background-image: url(images/book3.jpg);
 background-position: left;
 border: 1px solid black;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 
 
@@ -262,7 +266,12 @@ border: 1px solid black;
 .book4 {
   grid-column: 2/4;
   grid-row: 5/7;
-  background-color: white;
+background-image: url(images/book4.jpg);
+background-position: center;
+background-size: cover;
+border: 1px solid black;
+transition: transform 0.2s ease;
+
 }
 
 .book4 a {
@@ -283,7 +292,10 @@ border: 1px solid black;
 .book5 {
   grid-column: 4/6;
   grid-row: 5/7;
-  background-color: white;
+background-image: url(images/book5.jpg);
+background-position: center;
+background-size: cover;
+transition: transform 0.2s ease;
 }
 
 .book5 a {
@@ -304,7 +316,10 @@ border: 1px solid black;
 .book6 {
   grid-column: 6/8;
   grid-row: 5/7;
-  background-color: white;
+  background-image: url(images/book6.jpg);
+background-position: center;
+background-size: cover;
+transition: transform 0.2s ease;
 }
 
 .book6 a {
@@ -325,7 +340,10 @@ border: 1px solid black;
 .book7 {
   grid-column: 2/4;
   grid-row: 8/10;
-  background-color: white;
+  background-image: url(images/book7.jpg);
+background-position: center;
+background-size: cover;
+transition: transform 0.2s ease;
 }
 
 .book7 a {
@@ -346,7 +364,10 @@ border: 1px solid black;
 .book8 {
   grid-column: 4/6;
   grid-row: 8/10;
-  background-color: white;
+  background-image: url(images/book8.jpg);
+background-position: center;
+background-size: cover;
+transition: transform 0.2s ease;
 }
 
 .book8 a {
@@ -367,7 +388,10 @@ border: 1px solid black;
 .book9 {
   grid-column: 6/8;
   grid-row: 8/10;
-  background-color: white;
+  background-image: url(images/book9.jpg);
+background-position: center;
+background-size: cover;
+transition: transform 0.2s ease;
 }
 
 .book9 a {
@@ -383,6 +407,45 @@ border: 1px solid black;
   font-family: 'Playfair Display', serif;
   text-align: left;
 }
+
+.sidebar {
+  grid-column: 2/6;
+  grid-row: 2/10;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+
+.filter-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.filter-menu li {
+  margin: 10px 0;
+}
+
+.filter-menu a {
+  display: block;
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.filter-menu a:hover {
+  background-color: #e1e1e1;
+}
+
+.filter-menu a.active {
+  background-color: black;
+  color: white;
+}
+
       
 
     </style>
@@ -398,7 +461,7 @@ border: 1px solid black;
         </div>
   
         <div class="navbar">
-          <a href="home.html">Home</a>
+          <a href="loading.html">Home</a>
           <a href="#about">About Us</a>
           <a href="#services">Collections</a>
           <a href="#contact">Events</a>
@@ -423,10 +486,26 @@ border: 1px solid black;
 
     <div class="container">
       <div class="sidebar">
-            
+        <div class="filter-menu">
+          <ul>
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Fantasy</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Fiction</a></li>
+            <li><a href="#">Philosophy</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Mystery/Thriler</a></li>
+            <li><a href="#">Horror</a></li>
+            <li><a href="#">Poetry</a></li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Biography</a></li>
+            <li><a href="#">Crime</a></li>
+            <li><a href="#">Comics</a></li>
+          </ul>
+        </div>
       </div>
 
-      <<div class="books">
+      <div class="books">
         <!-- Book 1 -->
         <div class="book1">
             <a href="https://amzn.eu/d/0xmoYV8" target="_blank"></a>
@@ -453,50 +532,50 @@ border: 1px solid black;
     
         <!-- Book 4 -->
         <div class="book4">
-            <a href="https://amzn.example/book4-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/2duRmNW" target="_blank"></a>
         </div>
         <div class="book4_content">
-            Book 4 Title -<br>Author Name
+            The Psychology of Money -<br>Morgan Housel
         </div>
     
         <!-- Book 5 -->
         <div class="book5">
-            <a href="https://amzn.example/book5-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/gVfYfid" target="_blank"></a>
         </div>
         <div class="book5_content">
-            Book 5 Title -<br>Author Name
+           Who will cry when you die -<br>Robin Sharma
         </div>
     
         <!-- Book 6 -->
         <div class="book6">
-            <a href="https://amzn.example/book6-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/1NVk0Uz" target="_blank"></a>
         </div>
         <div class="book6_content">
-            Book 6 Title -<br>Author Name
+            Atomic Habits -<br>James Clear
         </div>
     
         <!-- Book 7 -->
         <div class="book7">
-            <a href="https://amzn.example/book7-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/4XIjv38" target="_blank"></a>
         </div>
         <div class="book7_content">
-            Book 7 Title -<br>Author Name
+            The Theory of Everything-<br>Stephen Hawking
         </div>
     
         <!-- Book 8 -->
         <div class="book8">
-            <a href="https://amzn.example/book8-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/6CDIDdM" target="_blank"></a>
         </div>
         <div class="book8_content">
-            Book 8 Title -<br>Author Name
+            Wings of Fire -<br>APJ Abdul Kalam
         </div>
     
         <!-- Book 9 -->
         <div class="book9">
-            <a href="https://amzn.example/book9-link" target="_blank"></a>
+            <a href="https://amzn.eu/d/68S4l2g" target="_blank"></a>
         </div>
         <div class="book9_content">
-            Book 9 Title -<br>Author Name
+            Family Wisdom -<br>Robin Sharma
         </div>
     </div>
     </div>
