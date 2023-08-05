@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: white;
+        font-family: 'Karla', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+      }
+
+      .logo img {
+        height: 50px;
+        margin: 20px;
+      }
+
+      .navbar {
+        display: flex;
+      }
+
+      .navbar a {
+        display: block;
+        color: black;
+
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+      }
+
+      .intro{
+        display: flex;
+        height: 750px;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .message{
+        font-size: 100px;
+        font-family: 'Playfair Display', serif;
+        width: 40%;
+
+      }
+
+      .sub_message{
+        height: 400px;
+        width: 500px;
+        font-size: 30px;
+        box-shadow: 9px 10px 17px 3px rgba(0,0,0,0.75);
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 25px;
+
+      }
+
+
+      footer {
+        background: black;
+        height: auto;
+        width: 100vw;
+        font-family: "Open Sans";
+        padding-top: 40px;
+        color: white;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-content h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 3rem;
+      }
+      .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+      }
+      .socials li {
+        margin: 0 10px;
+      }
+      .socials a {
+        text-decoration: none;
+        color: white;
+      }
+      .socials a i {
+        font-size: 1.1rem;
+        transition: color 0.4s ease;
+      }
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      .footer-bottom {
+        background: black;
+        width: 100vw;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .footer-bottom p {
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+      }
+      .footer-bottom span {
+        text-transform: uppercase;
+        opacity: 0.4;
+        font-weight: 200;
+      }
+
+      .container{
+        display: grid;
+        grid-template-columns: 0.5fr repeat(15,1fr) 0.5fr;
+        grid-template-rows: repeat(24,100px);
+      }
+
+      .sidebar{
+        grid-column: 2/6;
+        grid-row: 2/8;
+        background-color: bisque;
+        border-radius: 15px;
+
+      }
+
+      .books{
+        grid-column: 7/17;
+        grid-row: 2/21;
+                display: grid;
+        grid-template-columns: 0.5fr repeat(6,1fr) 0.5fr;
+        grid-template-rows: 0.5fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr 0.5fr ;
+        gap: 15px;
+        border-radius: 25px;
+        box-shadow: 9px 10px 17px 3px rgba(0,0,0,0.75);
+      }
+
+      .book1{
+        grid-column: 2/4;
+        grid-row: 2/4;
+        background-image: url("images/book1.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .book1 a{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+
+  
+
+      .book2{
+        grid-column: 4/6;
+        grid-row: 2/4;
+        background-image: url("images/book2.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .book3{
+        grid-column: 6/8;
+        grid-row: 2/4;
+        background-color: white;
+      }
+
+      .book4{
+        grid-column: 2/4;
+        grid-row: 5/7;
+        background-color: white;
+      }
+
+      .book5{
+        grid-column: 4/6;
+        grid-row: 5/7;
+        background-color: white;
+      }
+
+      .book6{
+        grid-column: 6/8;
+        grid-row: 5/7;
+        background-color: white;
+      }
+
+      .book7{
+        grid-column: 2/4;
+        grid-row: 8/10;
+        background-color: white;
+      }
+
+      .book8{
+        grid-column: 4/6;
+        grid-row: 8/10;
+        background-color: white;
+      }
+
+      .book9{
+        grid-column: 6/8;
+        grid-row: 8/10;
+        background-color: white;
+      }
+
+      
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo">
+          <img src="/Phase-2/images/logoin.png" alt="Logo" >
+          <div style="color: black">Eminent Library Society</div>
+        </div>
+  
+        <div class="navbar">
+          <a href="home.html">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Collections</a>
+          <a href="#contact">Events</a>
+          <a href="login.html">Login</a>        
+
+        </div>
+      </div>
+
+      <div class="intro">
+
+        <div class="message">
+            Find your dream books here....
+        </div>
+
+        <div class="sub_message">
+            The eminent library society provides a handful of the most curated books so that our users can drown themselves in the ectasy of reading
+        </div>
+
+      </div>
+
+
+
+    <div class="container">
+      <div class="sidebar">
+            
+      </div>
+
+      <div class="books">
+            <div class="book1">
+                <a href="https://amzn.eu/d/0xmoYV8" target="_blank"></a>
+            </div>
+
+            <div class="book2">
+                
+            </div>
+
+            <div class="book3">
+                
+            </div>
+
+            <div class="book4">
+                
+            </div>
+
+            <div class="book5">
+                
+            </div>
+
+            <div class="book6">
+                
+            </div>
+
+            <div class="book7">
+                
+            </div>
+
+            <div class="book8">
+                
+            </div>
+
+
+            <div class="book9">
+                
+            </div>
+      </div>
+    </div>
+
+
+
+
+
+    </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Eminent Library Society</h3>
+        <p>Where dreams come true</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+
+        
+
+      <div class="footer-bottom">
+        <p>
+          copyright &copy;2023 Eminent Library Society. designed by
+          <span>us.</span>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
