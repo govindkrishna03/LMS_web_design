@@ -176,7 +176,7 @@
 
       .books{
         grid-column: 7/17;
-        grid-row: 2/25;
+        grid-row: 2/24;
         display: grid;
         grid-template-columns: 0.5fr repeat(6,1fr) 0.5fr;
         grid-template-rows: 0.5fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr repeat(2,1fr) 1fr 0.5fr ;
@@ -185,72 +185,204 @@
         box-shadow: 9px 10px 17px 3px rgba(0,0,0,0.75);
       }
 
-      .book1{
-        grid-column: 2/4;
-        grid-row: 2/4;
-        background-image: url("images/book1.jpg");
-        background-position: center;
-        background-size: cover;
-      }
+      /* Book 1 */
+/* Book 1 */
+.book1 {
+  grid-column: 2/4;
+  grid-row: 2/4;
+  background-image: url("images/book1.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
-      .book1 a{
-        height: 100%;
-        width: 100%;
-        display: block;
-      }
+.book1 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 
-  
+.book1_content {
+  grid-row: 4/5;
+  grid-column: 2/4;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+  color: black;
+}
 
-      .book2{
-        grid-column: 4/6;
-        grid-row: 2/4;
-        background-image: url("images/book2.jpg");
-        background-position: center;
-        background-size: cover;
-      }
+/* Book 2 */
+.book2 {
+  grid-column: 4/6;
+  grid-row: 2/4;
+  background-image: url("images/book2.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
-      .book3{
-        grid-column: 6/8;
-        grid-row: 2/4;
-        background-color: white;
-      }
+.book2 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 
-      .book4{
-        grid-column: 2/4;
-        grid-row: 5/7;
-        background-color: white;
-      }
+.book2_content {
+  grid-row: 4/5;
+  grid-column: 4/6;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
 
-      .book5{
-        grid-column: 4/6;
-        grid-row: 5/7;
-        background-color: white;
-      }
+/* Book 3 */
+.book3 {
+  grid-column: 6/8;
+  grid-row: 2/4;
+background-image: url(images/book3.jpg);
+background-position: left;
+border: 1px solid black;
+  background-size: cover;
+}
 
-      .book6{
-        grid-column: 6/8;
-        grid-row: 5/7;
-        background-color: white;
-      }
 
-      .book7{
-        grid-column: 2/4;
-        grid-row: 8/10;
-        background-color: white;
-      }
+.book3 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 
-      .book8{
-        grid-column: 4/6;
-        grid-row: 8/10;
-        background-color: white;
-      }
+.book3_content {
+  grid-row: 4/5;
+  grid-column: 6/8;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
 
-      .book9{
-        grid-column: 6/8;
-        grid-row: 8/10;
-        background-color: white;
-      }
+/* Book 4 */
+.book4 {
+  grid-column: 2/4;
+  grid-row: 5/7;
+  background-color: white;
+}
 
+.book4 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book4_content {
+  grid-row: 7/8;
+  grid-column: 2/4;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+/* Book 5 */
+.book5 {
+  grid-column: 4/6;
+  grid-row: 5/7;
+  background-color: white;
+}
+
+.book5 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book5_content {
+  grid-row: 7/8;
+  grid-column: 4/6;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+/* Book 6 */
+.book6 {
+  grid-column: 6/8;
+  grid-row: 5/7;
+  background-color: white;
+}
+
+.book6 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book6_content {
+  grid-row: 7/8;
+  grid-column: 6/8;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+/* Book 7 */
+.book7 {
+  grid-column: 2/4;
+  grid-row: 8/10;
+  background-color: white;
+}
+
+.book7 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book7_content {
+  grid-row: 10/11;
+  grid-column: 2/4;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+/* Book 8 */
+.book8 {
+  grid-column: 4/6;
+  grid-row: 8/10;
+  background-color: white;
+}
+
+.book8 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book8_content {
+  grid-row: 10/11;
+  grid-column: 4/6;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+/* Book 9 */
+.book9 {
+  grid-column: 6/8;
+  grid-row: 8/10;
+  background-color: white;
+}
+
+.book9 a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.book9_content {
+  grid-row: 10/11;
+  grid-column: 6/8;
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
       
 
     </style>
@@ -294,44 +426,79 @@
             
       </div>
 
-      <div class="books">
-            <div class="book1">
-                <a href="https://amzn.eu/d/0xmoYV8" target="_blank"></a>
-            </div>
-
-            <div class="book2">
-                
-            </div>
-
-            <div class="book3">
-                
-            </div>
-
-            <div class="book4">
-                
-            </div>
-
-            <div class="book5">
-                
-            </div>
-
-            <div class="book6">
-                
-            </div>
-
-            <div class="book7">
-                
-            </div>
-
-            <div class="book8">
-                
-            </div>
-
-
-            <div class="book9">
-                
-            </div>
-      </div>
+      <<div class="books">
+        <!-- Book 1 -->
+        <div class="book1">
+            <a href="https://amzn.eu/d/0xmoYV8" target="_blank"></a>
+        </div>
+        <div class="book1_content">
+            The Book of Life -<br>Krishnamurthi
+        </div>
+    
+        <!-- Book 2 -->
+        <div class="book2">
+            <a href="https://amzn.eu/d/5WWsTTI" target="_blank"></a>
+        </div>
+        <div class="book2_content">
+            The Alchemist -<br>Paulo Coelho
+        </div>
+    
+        <!-- Book 3 -->
+        <div class="book3">
+            <a href="https://amzn.eu/d/bpEx4V4" target="_blank"></a>
+        </div>
+        <div class="book3_content">
+            The Almanack of <br> Naval Ravikant
+        </div>
+    
+        <!-- Book 4 -->
+        <div class="book4">
+            <a href="https://amzn.example/book4-link" target="_blank"></a>
+        </div>
+        <div class="book4_content">
+            Book 4 Title -<br>Author Name
+        </div>
+    
+        <!-- Book 5 -->
+        <div class="book5">
+            <a href="https://amzn.example/book5-link" target="_blank"></a>
+        </div>
+        <div class="book5_content">
+            Book 5 Title -<br>Author Name
+        </div>
+    
+        <!-- Book 6 -->
+        <div class="book6">
+            <a href="https://amzn.example/book6-link" target="_blank"></a>
+        </div>
+        <div class="book6_content">
+            Book 6 Title -<br>Author Name
+        </div>
+    
+        <!-- Book 7 -->
+        <div class="book7">
+            <a href="https://amzn.example/book7-link" target="_blank"></a>
+        </div>
+        <div class="book7_content">
+            Book 7 Title -<br>Author Name
+        </div>
+    
+        <!-- Book 8 -->
+        <div class="book8">
+            <a href="https://amzn.example/book8-link" target="_blank"></a>
+        </div>
+        <div class="book8_content">
+            Book 8 Title -<br>Author Name
+        </div>
+    
+        <!-- Book 9 -->
+        <div class="book9">
+            <a href="https://amzn.example/book9-link" target="_blank"></a>
+        </div>
+        <div class="book9_content">
+            Book 9 Title -<br>Author Name
+        </div>
+    </div>
     </div>
 
 
