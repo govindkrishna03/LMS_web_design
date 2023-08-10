@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Background Color Changer</title>
+</head>
+
+<body>
+    <h2>Background Color Changer:</h2>
+    <input type="checkbox" id="redCheckbox" onchange="changeBackground('red')">Red
+    <input type="checkbox" id="blueCheckbox" onchange="changeBackground('blue')">Blue
+    <input type="checkbox" id="greenCheckbox" onchange="changeBackground('green')">Green
+
+    <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+
+            if (color === 'red') {
+                document.getElementById('blueCheckbox').checked = false;
+                document.getElementById('greenCheckbox').checked = false;
+            } else if (color === 'blue') {
+                document.getElementById('redCheckbox').checked = false;
+                document.getElementById('greenCheckbox').checked = false;
+            } else if (color === 'green') {
+                document.getElementById('redCheckbox').checked = false;
+                document.getElementById('blueCheckbox').checked = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

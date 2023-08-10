@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Square Root Finder</title>
+</head>
+
+<body>
+    <h2>Enter a number to find its square root:</h2>
+    <input type="text" id="numberInput">
+    <button onclick="calculateSquareRoot()">Find Square Root</button>
+    <p id="output"></p>
+
+    <script>
+        function calculateSquareRoot() {
+            let input = document.getElementById('numberInput').value;
+            let number = parseFloat(input);
+            let result = Math.sqrt(number);
+            document.getElementById('output').innerText = `Square root of ${number} is: ${isNaN(result) ? 'Invalid input' : result}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Paragraphs</title>
+</head>
+
+<body>
+    <h2>Click the button to add paragraphs:</h2>
+    <button onclick="addParagraph()">Add Paragraph</button>
+    <div id="paragraphContainer">
+     Hey hey hey
+    </div>
+
+    <script>
+        function addParagraph() {
+            const paragraphContainer = document.getElementById('paragraphContainer');
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph.';
+            paragraphContainer.appendChild(newParagraph);
+        }
+    </script>
+</body>
+
+</html>

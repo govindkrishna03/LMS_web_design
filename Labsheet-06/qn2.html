@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Number Guesser</title>
+</head>
+
+<body>
+    <h2>Guess a random number from 1 to 10:</h2>
+    <button onclick="guessRandomNumber()">Guess</button>
+    <p id="output"></p>
+
+    <script>
+        function guessRandomNumber() {
+            let randomNumber = Math.floor(Math.random() * 10) + 1;
+            document.getElementById('output').innerText = `Random number: ${randomNumber}`;
+        }
+    </script>
+</body>
+
+</html>

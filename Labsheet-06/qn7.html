@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigator Properties</title>
+</head>
+
+<body>
+
+    <h2>Navigator Properties:</h2>
+    <button onclick="displayProperties()">Display Properties</button>
+    <ul id="output"></ul>
+
+    <script>
+        function displayProperties() {
+            let outputList = document.getElementById('output');
+            outputList.innerHTML = '';
+
+            for (let prop in navigator) {
+                let listItem = document.createElement('li');
+                listItem.innerText = prop;
+                outputList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
+</html>
