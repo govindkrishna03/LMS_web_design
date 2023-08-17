@@ -445,6 +445,53 @@ transition: transform 0.2s ease;
   background-color: black;
   color: white;
 }
+@media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar {
+        margin-top: 10px;
+      }
+
+      .intro {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+
+      .sub_message {
+        width: 80%;
+        margin: 20px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+
+      .sidebar {
+        grid-column: 1;
+        border-left: none;
+        border-bottom: none;
+        padding-left: 0;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+
+      .books {
+        grid-column: 1;
+        grid-row: 2;
+        display: block;
+        margin-top: 20px;
+      }
+
+      .book1, .book2, .book3, .book4, .book5, .book6, .book7, .book8, .book9 {
+        margin: 0 auto;
+      }
+      
+    }
 
       
 
@@ -456,13 +503,13 @@ transition: transform 0.2s ease;
     
     <div class="header">
         <div class="logo">
-          <img src="/Phase-2/images/logoin.png" alt="Logo" >
+          <img src="images/logoin.png" alt="Logo" >
           <div style="color: black">Eminent Library Society</div>
         </div>
   
         <div class="navbar">
           <a href="loading.html">Home</a>
-          <a href="#about">About Us</a>
+          <a href="about.html">About Us</a>
           <a href="#services">Collections</a>
           <a href="events.html">Events</a>
           <a href="login.html">Login</a>        

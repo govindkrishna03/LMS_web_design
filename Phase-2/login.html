@@ -68,12 +68,11 @@
         }
         .form-group input {
             opacity: 1;
-            width: 36vh;
+            width: 40vh;
             height: 2vh;
             padding: 10px;
-            
             border: 1px solid #ccc;
-            padding-left: 50px; /* Make space for the label */
+           
         }
         .form-group input[type="submit"] {
             width: 100%;
@@ -130,6 +129,23 @@
             text-decoration: none;
         }
     </style>
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+    
+                if (username === "" || password === "") {
+                    alert("Both username and password are required.");
+                    return false;
+                }
+                
+                if (username === "demo" && password === "demo") {
+                window.location.href = "home.html";
+            }
+
+            return false;
+            }
+        </script>
 </head>
 <body>
     <div class="header">
@@ -138,7 +154,7 @@
         </div>
         <div class="navbar">
             <a href="home.html">Home</a>
-            <a href="#about">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="books.html">Collections</a>
             <a href="events.html">Events</a>
             <a href="login.html">Login</a>  
@@ -149,7 +165,7 @@
             <img src="images/logoin.png" alt="Logo">
         </div>
         <h1>LOGIN</h1>
-        <form action="/login" method="post">
+        <form action="/login" method="post" onsubmit="return validateForm();">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
