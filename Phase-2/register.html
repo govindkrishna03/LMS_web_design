@@ -131,6 +131,49 @@
             text-decoration: none;
         }
     </style>
+     <script>
+        function redirectToHome() {
+            window.location.href = "home.html";
+        }
+    
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+    
+            if (username === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+    
+            if (email === "") {
+                alert("Please enter an email address.");
+                return false;
+            }
+    
+            if (password === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+    
+            if (confirmPassword === "") {
+                alert("Please confirm your password.");
+                return false;
+            }
+    
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+    
+    
+            alert("Successfully registered!");
+            redirectToHome();
+    
+            return true;
+        }
+    </script>
     
 </head>
 <body>
@@ -151,7 +194,7 @@
             <img src="images/logoin.png" alt="Logo">
         </div>
         <h1>REGISTER</h1>
-        <form action="/login" method="post" onsubmit="return validateForm()">
+        <form action="/register" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -173,49 +216,8 @@
             </div>
         </form>
         <div class="dont-have-account">
-            <a href="login.html">Already have an Account? <b>Login</b></a>
+            <a href="login.html">Already have an Account? <span><u>Login</u></span ></a>
         </div>
     </div>
-    <script>
-        function redirectToLogin() {
-            window.location.href = "login.html";
-        }
-        
-        function validateForm() {
-            var username = document.getElementById("username").value;
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            var confirmPassword = document.getElementById("confirm-password").value;
-
-            if (username === "") {
-                alert("Please enter a username.");
-                return false;
-            }
-
-            if (email === "") {
-                alert("Please enter an email address.");
-                return false;
-            }
-
-            if (password === "") {
-                alert("Please enter a password.");
-                return false;
-            }
-
-            if (confirmPassword === "") {
-                alert("Please confirm your password.");
-                return false;
-            }
-
-            if (password !== confirmPassword) {
-                alert("Passwords do not match.");
-                return false;
-            }
-
-            return true;
-        }
-        
-        // Add any additional JavaScript functions or logic here
-    </script>
 </body>
 </html>
