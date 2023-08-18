@@ -445,55 +445,67 @@ transition: transform 0.2s ease;
   background-color: black;
   color: white;
 }
-@media screen and (max-width: 768px) {
-      .header {
-        flex-direction: column;
-        align-items: center;
-      }
 
-      .navbar {
-        margin-top: 10px;
-      }
+    @media screen and (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
 
-      .intro {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-      }
+            .header{
+              display: flex;
+              flex-direction: column;
+            }
 
-      .sub_message {
-        width: 80%;
-        margin: 20px;
-      }
+            .sub_message {
+                width: 80%;
+                margin: 20px;
+            }
 
-      .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-      }
+            .container {
+                display: block;
+            }
 
-      .sidebar {
-        grid-column: 1;
-        border-left: none;
-        border-bottom: none;
-        padding-left: 0;
-        padding-bottom: 20px;
-        text-align: center;
-      }
+            .sidebar {
+                grid-column: 1;
+                border-left: none;
+                border-bottom: none;
+                padding-left: 0;
+                padding-bottom: 20px;
+                text-align: center;
+                margin: 100px 0px;
+            }
 
-      .books {
-        grid-column: 1;
-        grid-row: 2;
-        display: block;
-        margin-top: 20px;
-      }
+            .books {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 200px 30px;
+            }
 
-      .book1, .book2, .book3, .book4, .book5, .book6, .book7, .book8, .book9 {
-        margin: 0 auto;
-      }
-      
-    }
+            .book1, .book2, .book3, .book4, .book5, .book6, .book7, .book8, .book9 {
+              
+                height: 400px;
+                width: 50vw;
+                margin: 50px 0px;
+               
+            }
 
-      
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+                
+            }
+
+            .navbar a {
+                margin-top: 10px;
+            }
+            .book9_content{
+              margin-bottom: 50px;
+            }
+        }
 
     </style>
 

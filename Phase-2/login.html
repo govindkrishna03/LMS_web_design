@@ -128,21 +128,31 @@
       }
     </style>
     <script>
-      function validateForm() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+     function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
 
-        if (username === "" || password === "") {
-          alert("Both username and password are required.");
-          return false;
-        }
+  if (username === "" || password === "") {
+    alert("Both username and password are required.");
+    return false;
+  }
 
-        if (username === "demo" && password === "demo") {
-          window.location.href = "home.html";
-        }
+  if (!/^[a-zA-Z0-9-_]+$/.test(username) || username.length < 6) {
+    alert("Username must be alphanumeric, at least 6 characters long, and can only contain '-', '_', or letters and digits.");
+    return false;
+  }
 
-        return false;
-      }
+  if (!/^[\w!@#$]+$/.test(password) || password.length < 6) {
+    alert("Password must be alphanumeric, at least 6 characters long, and can only contain '!@#$ or letters and digits.");
+    return false;
+  }
+
+  window.location.href = "home.html";
+
+  return false;
+}
+
+
     </script>
   </head>
   <body>

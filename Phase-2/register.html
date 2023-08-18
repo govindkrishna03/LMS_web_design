@@ -163,7 +163,19 @@
                 alert("Passwords do not match.");
                 return false;
             }
-    
+            if (!/^[a-zA-Z0-9-_]+$/.test(username) || username.length < 6) {
+    alert("Username must be alphanumeric, at least 6 characters long, and can only contain '-', '_', or letters and digits.");
+    return false;
+  }
+
+  if (!/^[\w!@#$]+$/.test(password) || password.length < 6) {
+    alert("Password must be alphanumeric, at least 6 characters long, and can only contain '!@#$ or letters and digits.");
+    return false;
+  }
+
+  window.location.href = "home.html";
+
+        return false;
             alert("Successfully registered!");
             redirectToHome();
     
